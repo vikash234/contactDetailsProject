@@ -1,0 +1,122 @@
+<div class="container-fluid"> 
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <!-- <mat-card class="card-mat">
+        <div class="example-container">
+          <mat-form-field appearance="fill">
+            <mat-label>Enter your First Name</mat-label>
+            <input matInput placeholder="pat@example.com" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="example-container">
+          <mat-form-field appearance="fill">
+            <mat-label>Enter your Last Name</mat-label>
+            <input matInput placeholder="pat@example.com" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="example-container">
+          <mat-form-field appearance="fill">
+            <mat-label>Enter your email</mat-label>
+            <input matInput placeholder="pat@example.com" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="example-container">
+          <mat-form-field appearance="fill">
+            <mat-label>Enter your Contact Number</mat-label>
+            <input matInput placeholder="pat@example.com" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="example-container">
+          <mat-radio-group >Select an option:
+            <mat-radio-button value="1">Active</mat-radio-button>
+            <mat-radio-button value="2">Inactive</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </mat-card> -->
+    
+      <mat-card class="card-form">
+      
+        <mat-card-content>
+          <form [formGroup]="contactInfoForm" (ngSubmit)="onSubmit()">
+            <!-- <div class="row"> -->
+              <!-- <div class="col-md-6"> -->
+                <div class="form-group">
+                  <mat-form-field >
+                    <mat-label>First Name</mat-label>
+                    <input matInput formControlName="firstName" maxlength="17" [ngClass]="{ 'is-invalid': formControl.firstName.touched && formControl.firstName.errors }" />
+                  </mat-form-field>
+                  <mat-error *ngIf="formControl.firstName.touched && formControl.firstName.errors">
+                    <div *ngIf="formControl.firstName.errors.required">First Name is required</div>
+                  </mat-error>
+                </div>
+                <div class="form-group">
+                  <mat-form-field>
+                    <mat-label>Last Name</mat-label>
+                    <input matInput  formControlName="lastName" [ngClass]="{ 'is-invalid': formControl.lastName.touched && formControl.lastName.errors }" />
+                  </mat-form-field>
+                  <mat-error *ngIf="formControl.lastName.touched && formControl.lastName.errors">
+                    <div *ngIf="formControl.lastName.errors.required">Last Name is required</div>
+                  </mat-error>
+                </div>
+                <div class="form-group">
+                  <mat-form-field>
+                    <mat-label>
+                    Date of Birth</mat-label>
+                    <input matInput readonly formControlName="dob" [matDatepicker]="picker" [ngClass]="{ 'is-invalid': formControl.dob.touched && formControl.dob.errors }"
+                    />
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                  <mat-error *ngIf="formControl.dob.touched && formControl.dob.errors">
+                    <div *ngIf="formControl.dob.errors.required">Date of Birth is required</div>
+                    <!-- <div *ngIf="formControl.retDeliveryDate.errors.pattern">Number Only</div> -->
+                  </mat-error>
+                </div>
+                <div class="form-group">
+                  <mat-form-field>
+                    <mat-label>CONTACT NUMBER</mat-label>
+                    <input matInput appPhoneMask formControlName="contactNbr" [ngClass]="{ 'is-invalid': formControl.contactNbr.touched && formControl.contactNbr.errors }"
+                    />
+                  </mat-form-field>
+                  <mat-error *ngIf="formControl.contactNbr.touched && formControl.contactNbr.errors">
+                    <div *ngIf="formControl.contactNbr.errors.required">Contact number is required</div>
+                  </mat-error>
+  
+                </div>
+              <!-- </div> -->
+              <!-- <div class="col-md-6"> -->
+              
+                <div class="form-group">
+                  <mat-form-field >
+                    <mat-label>
+                      Email</mat-label>
+                    <input matInput formControlName="email" [ngClass]="{ 'is-invalid': formControl.email.touched && formControl.email.errors }" />
+                  </mat-form-field>
+                  <mat-error *ngIf="formControl.email.touched && formControl.email.errors">
+                    <div *ngIf="formControl.email.errors.required">Email is required</div>
+                    <!-- <div *ngIf="formControl.dealerWarranties.errors.pattern">Number Only</div> -->
+                  </mat-error>
+                </div>
+                
+  
+               
+<!--   
+              </div>
+  
+            </div> -->
+  
+            <div class="form-group">
+
+              <button mat-raised-button type="button" class="pull-right submit-btn" >SUBMIT</button>
+              </div>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+</div>

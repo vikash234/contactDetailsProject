@@ -1,0 +1,48 @@
+.container1{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky;
+    position: relative;
+    top: 0;
+    top: inherit;
+    width: auto;
+
+    li {
+        float: left;
+      } 
+      a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      a:hover {
+        background-color: #111;
+      }
+      
+     .active {
+        background-color: #4CAF50;
+      }
+     
+}
+@media screen and (min-width: 480px) {
+.grid-container{
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+  .grid-item3{
+    position: relative;
+    margin-top: 600px;
+    margin-left: 350px;
+  li:hover {
+      background-color: rgb(14, 185, 23);
+    } 
+}
+
+  }
+}
+

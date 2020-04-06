@@ -1,0 +1,27 @@
+.example-container .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+  .card-form{
+      position: relative;
+      top: 28%;
+      
+  }
+  .mat-card{
+    background: linear-gradient(to right, #044782 0%, #14822d 100%);
+    border-radius: 0px;
+  }
+  .mat-form-field-label{
+      color: black;
+  }
+  .form-group{
+    padding: 0px 50px 0px 50px;
+  }
+  .mat-form-field{
+      width: 100%;
+  }
+  .submit-btn{
+    background-color: #064377;
+    border-radius: 0px;
+    top: 30px;
+    left: 64px;
+  }

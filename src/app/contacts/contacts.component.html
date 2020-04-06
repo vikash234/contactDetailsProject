@@ -1,0 +1,54 @@
+
+<div class="container-fluid">
+<div class="row">
+<div >
+   <img src="../../assets/contactus.jpg" alt="">
+<!-- <mat-card >
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+        bred for hunting.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions> 
+  </mat-card> -->
+</div>
+<div class="col-md-6" style="padding-top: 10px;">
+    <form class="example-form">
+            <mat-form-field class="example-full-width" >
+              <mat-label>Contacts</mat-label>
+              <input matInput [formControl]="contactFormControl" placeholder="Ex. 9663378934">
+              <!-- <mat-error *ngIf="!emailFormControl.hasError('required')">
+                Please enter a valid email address
+              </mat-error> -->
+              <!-- <mat-error *ngIf="emailFormControl.hasError('required')">
+                Email is <strong>required</strong>
+              </mat-error> -->
+            </mat-form-field>
+          </form>
+</div>
+</div>
+<div class="row button2">
+  <div class="col-md-5 offset-md-2">
+  <button type="submit" class="button1 btn btn-primary" [routerLink]="[ 'form' ]"><span class="material-icons">
+    add_circle
+    </span><span class="add">Add-Contacts</span></button>
+  </div>
+  <div class="col-md-5">
+    <button type="submit" class="button1 btn btn-primary"  [routerLink]="[ 'view' ]"><span class="material-icons">
+      format_list_bulleted
+      </span><span class="add">List-Contacts</span></button>
+    </div>  
+</div>
+
+</div>
