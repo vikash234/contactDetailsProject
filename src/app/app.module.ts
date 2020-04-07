@@ -22,6 +22,8 @@ import { MatNativeDateModule } from '@angular/material';
 import {MatButtonModule} from '@angular/material/button';
 import { ViewContactsComponent } from './view-contacts/view-contacts.component';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatIconModule} from '@angular/material/icon';
 
 import { HttpClientModule } from "@angular/common/http";
 // const approutes: Routes=[{ }];
@@ -49,7 +51,9 @@ import { HttpClientModule } from "@angular/common/http";
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatAutocompleteModule,
+    MatIconModule
    
   ],
   providers: [],

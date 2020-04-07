@@ -4,14 +4,16 @@
         "lastName": "Kumar",
         "contactNbr": "780316345",
         "email": "ankit45@gmail.com",
-        "dob": "15-08-1995"
+        "dob": "15-08-1995",
+        "status": "Active"
     },
     {
-        "firstName": "tiya",
+        "firstName": "Tiya",
         "lastName": "Kumari",
-        "contactNbr": "780316345",
-        "email": "ankit45@gmail.com",
-        "dob": "15-08-1995"
+        "contactNbr": "680316345",
+        "email": "tiyaku23@gmail.com",
+        "dob": "01-12-1990",
+        "status": "Active"
     }
 ]
     

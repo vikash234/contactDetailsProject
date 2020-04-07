@@ -1,20 +1,56 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-8 offset-md-2">
-<div>
+          <div class="row">
+          <div class="col-md-6  "><h2>Contact Details</h2></div>
+          <div class="col-md-3 offset-md-3" style="position: relative; top: 25px;"> <mat-form-field>
+            <input matInput id="myInput" joyrideStep="secondStep" title="VIN-Search" text="Search for any VIN" type="text"
+              [matAutocomplete]="auto" [formControl]="stateCtrl" placeholder="Search by Email Id"
+              (keydown.enter)="viewDetails(stateCtrl.value)"/>
+            <mat-autocomplete #auto="matAutocomplete">
+              <div style="margin-left:18px;margin-top:15px;color: #191919;font-size: 14px">Suggestings result </div>
+              <mat-option *ngFor="let name of filteredVinArray | async" [value]="name">
+                <span (click)="viewDetails(name)" style="color: #666666;font-size: 14px;">{{name}}</span>
+              </mat-option>
+            </mat-autocomplete>
+            <mat-icon (click)="viewDetails(stateCtrl.value)" class="search-icon" matSuffix>search</mat-icon>
+          </mat-form-field></div>
+        </div>
+<div style="margin-top: 50px;">
+ 
     <mat-accordion>
+      <div *ngFor="let i of ContactDetails">
         <mat-expansion-panel>
           <mat-expansion-panel-header>
-            <mat-panel-title>
-              {{ContactDetails.firstName}}
+            <mat-panel-title style="font-weight: bold;">
+              <div class="row" style="width: 100%;">
+                <div class="col-md-11"> {{i.firstName+' '+i.lastName}}</div>
+                <div class="col-md-1"><span (click)="editOnClick(i)" class="material-icons">
+                  create
+                  <span (click)="deleteonClick(i)" class="material-icons">
+                    delete
+                    </span>
+                  </span>
+                  </div>
+              </div>
+             
             </mat-panel-title>
             
           </mat-expansion-panel-header>
       
-          <div>
-           <div>
-             Date Of Birth:{{ContactDetails.dob}}
+          <div class="row">
+           <div class="col-md-3"style="color: black;">
+            <span style="font-weight: bold;">  Date Of Birth: </span> {{i.dob|date}}
            </div>
+           <div class="col-md-3" style="color: black;">
+           <span style="font-weight: bold;"> Contact Number: </span> {{i.contactNbr}}
+            </div>
+            <div class="col-md-3" style="color: black;">
+              <span style="font-weight: bold;"> Email: </span> {{i.email}}
+               </div>
+               <div class="col-md-3" style="color: black;">
+                <span style="font-weight: bold;"> Status: </span> {{i.status}}
+                 </div>
           </div>
       
           <!-- <mat-form-field>
@@ -22,6 +58,7 @@
             <input matInput type="number" min="1">
           </mat-form-field> -->
         </mat-expansion-panel>
+      </div>
         <!-- <mat-expansion-panel (opened)="panelOpenState = true"
                              (closed)="panelOpenState = false">
           <mat-expansion-panel-header>
